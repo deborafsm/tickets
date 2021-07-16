@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+        var db = openDatabase("Meubanco","2.0","Mybase",4048);
+        db.transaction(function(criar){
+          criar.executeSql("CREATE TABLE nome (id INTEGER PRIMARY KEY, nome TEXT)");
+        });
+  
+        function salvar(){
+          var nome = document.getElementById('nome').value;
+          
+          db.transaction(function(armazenar){
+              armazenar.executeSql("INSERT INTO nome (nome) VALUES (?)",[nome]);
+          });
+        }
+      </script>
+</head>
+<body>
+      
+    <form onsubmit="salvar()"> 
+        <input type="text" id="nome">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

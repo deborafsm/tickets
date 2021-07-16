@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script/script.js"></script>
+</head>
+<body>
+  <form onsubmit="salvar()">
+      <p>Cliente: <select id="cliente">
+          
+        <option value="">Pesquisar Cliente ... </option>
+        <option>Débora Freire</option>
+        <option>Jose da Silva</option>
+        <option>Bruno Ferreira</option>
+        <option>Robert Freitas</option>
+      </select></p>
+      
+      <p>Departamento: <select id="departamento">
+        
+        <option value="">Pesquisar Departamento ... </option>
+        <option>Empresa 1 </option>
+        <option>Empresa 2</option>
+      
+      </select></p>
+      <p>Categoria: <select id="categoria">
+        
+        <option value="">Pesquisar Categoria ... </option>
+        <option>Categoria 1 </option>
+        <option>Categoria 2</option>
+      
+      </select></p>
+      <p>Assunto: <input type="text" id="assunto"></p>
+      <p>Mensagem: <input type="text" id="mensagem"></p>
+
+      <p>Prioridade: <select id="prioridade">
+        
+        <option value="">Baixa</option>
+        <option>Media</option>
+        <option>Alta</option>
+        <option>Urgente</option>
+      </select></p>
+
+      <p>Atendente: <select id="atendente">
+        
+        <option value="">Escolher Atendente </option>
+        <option>Atendente 1</option>
+        <option>Atendente 2</option>
+        <option>Atendente 3</option>
+      </select></p>
+      <input type="submit" value="Enviar">
+  </form>
+    
+</body>
+</html>
