@@ -25,8 +25,13 @@ const Chamados = db.sequelize.define('chamados',{
         type:db.Sequelize.STRING
     },
     atendente:{
-        type:db.Sequelize.STRING,
+        type:db.Sequelize.STRING
+       
+    },
+    mensagem:{
+        type:db.Sequelize.TEXT
        
     }
 })
-//Chamados.sync({force: true}) para forçar a criação da tabela
+module.exports = Chamados
+//Chamados.sync({force: true}) //para forçar a criação da tabela
