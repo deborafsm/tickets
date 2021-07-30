@@ -7,6 +7,129 @@
     <title>Postagens node.js</title>
 </head>
 <body>
+    <div class="container">
+  <nav>Navbar</nav>
+  <main>
     {{{body}}}
+
+  </main>
+  <div id="sidebar">Sidebar</div>
+  <div id="content1">Content1</div>
+  <div id="content2">Content2</div>
+  <div id="content3">Content3</div>
+  <footer>Footer</footer>
+</div>
+
+            
+<style>
+    p{
+        text-align: left;
+    }
+   input[type=text]{ border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow: 1px 1px 2px #333333;-moz-box-shadow: 1px 1px 2px #333333;-webkit-box-shadow: 1px 1px 2px #333333;background: #cccccc; border:1px solid #000000;width:150px}textarea{border: 1px solid #000000;background:#cccccc;width:150px;height:100px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow: 1px 1px 2px #333333;-moz-box-shadow: 1px 1px 2px #333333;-webkit-box-shadow: 1px 1px 2px #333333;}input[type=text]:hover, textarea:hover{          background: #ffffff; border:1px solid #990000;}
+   input[type=submit]{        background:#006699;        color:#ffffff;}
+   select{ border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow: 1px 1px 2px #333333;-moz-box-shadow: 1px 1px 2px #333333;-webkit-box-shadow: 1px 1px 2px #333333;background: #cccccc; border:1px solid #000000;width:150px}textarea{border: 1px solid #000000;background:#cccccc;width:150px;height:100px;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow: 1px 1px 2px #333333;-moz-box-shadow: 1px 1px 2px #333333;-webkit-box-shadow: 1px 1px 2px #333333;}input[type=text]:hover, textarea:hover{          background: #ffffff; border:1px solid #990000;}
+    :root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #000000;
+  text-align: center;
+}
+
+nav {
+  background: #8b848b;
+  grid-area: nav;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+main {
+  background: #cccccc;
+  grid-area: main;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  
+}
+
+#sidebar {
+  background: #8b848b;
+  grid-area: sidebar;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content1 {
+  background: #8b848b;
+  grid-area: content1;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content2 {
+  background: #8b848b;
+  grid-area: content2;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+#content3 {
+  background: #8b848b;
+  grid-area: content3;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+footer {
+  background: #8b848b;
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 550px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "content1"
+      "content2"
+      "content3"
+      "footer";
+  }
+}
+
+</style>
+    
 </body>
 </html>

@@ -36,6 +36,7 @@ const sequelize = new Sequelize('projeto_chamado','root','',{
                 mensagem:req.body.mensagem                
             }).then(function(){
                 res.send("Chamado Criado com sucesso!")
+                res.redirect('/cad')
             }).catch(function(erro){
                 res.send("Houve um erro "+erro)
             })

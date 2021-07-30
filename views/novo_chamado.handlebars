@@ -1,6 +1,7 @@
 <form  action="/novo_chamado" method="POST">
+     <p>protocolo: <input type="text" name="protocolo"></p>
       <p>Cliente: <select name="cliente">
-          
+                  
         <option value="">Pesquisar Cliente ... </option>
         <option>Débora Freire</option>
         <option>Jose da Silva</option>
@@ -23,9 +24,10 @@
       
       </select></p>
       <p>Assunto: <input type="text" name="assunto"></p>
-      <p>Mensagem: <input type="text" name="mensagem"></p>
+      <p>Mensagem:
+      <textarea name="mensagem" class="field" cols="30" rows="10"></textarea>
 
-      <p>Prioridade: <select name="prioridade">
+      <p>Prioridade: <select name="status">
         
         <option value="">Baixa</option>
         <option>Media</option>
@@ -40,6 +42,6 @@
         <option>Atendente 2</option>
         <option>Atendente 3</option>
       </select></p>
-    <button type="submit">Cadastrar</button>
+    <button type="submit" style="text-align: left;">Cadastrar</button>
 
   </form>
